@@ -42,7 +42,7 @@ class CounterSimulation extends React.Component
             alert("Please Input WindowID");
             return;
         }
-        fetch('http://localhost:8080/DataCreateAction/createManualData' +
+        fetch('http://localhost:32003/DataCreateAction/createManualData' +
             '?windowID=' + windowID,
             {
                 method: 'GET',
@@ -67,7 +67,7 @@ class CounterSimulation extends React.Component
             return;
         }
 
-        fetch('http://localhost:8080/DataCreateAction/createRandomData' +
+        fetch('http://localhost:32003/DataCreateAction/createRandomData' +
             '?windowID=' + windowID,
             {
                 method: 'GET',

@@ -12,7 +12,7 @@ class UserPageNav extends Component {
         login:false
     };
     componentWillMount(){
-        fetch('http://localhost:8080/User/State',{
+        fetch('http://localhost:32003/User/State',{
             credentials: 'include',
             method:'GET',
             mode:'cors',

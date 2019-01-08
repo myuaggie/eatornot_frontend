@@ -39,7 +39,7 @@ class UserManager extends React.Component
 
     showUser(){
         let tmp = [];
-        fetch('http://localhost:8080/Admin/showUsers',
+        fetch('http://localhost:32003/Admin/showUsers',
             {
                 method: 'GET',
                 mode: 'cors',
@@ -73,7 +73,7 @@ class UserManager extends React.Component
     deleteUser(){
         let formData=new FormData();
         formData.append("UserID",this.state.rowIDs);
-        fetch('http://localhost:8080/Admin/deleteUsers',
+        fetch('http://localhost:32003/Admin/deleteUsers',
             {
                 method: 'POST',
                 mode: 'cors',
@@ -92,7 +92,7 @@ class UserManager extends React.Component
     freezeUser(){
         let formData=new FormData();
         formData.append("UserID",this.state.rowIDs);
-        fetch('http://localhost:8080/Admin/freezeUsers',
+        fetch('http://localhost:32003/Admin/freezeUsers',
             {
                 method: 'POST',
                 mode: 'cors',
@@ -111,7 +111,7 @@ class UserManager extends React.Component
     activateUser(){
         let formData=new FormData();
         formData.append("UserID",this.state.rowIDs);
-        fetch('http://localhost:8080/Admin/activateUsers',
+        fetch('http://localhost:32003/Admin/activateUsers',
             {
                 method: 'POST',
                 mode: 'cors',

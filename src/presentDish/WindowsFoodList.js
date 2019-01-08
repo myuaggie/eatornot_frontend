@@ -120,7 +120,7 @@ class WindowsFoodList extends React.Component {
 
         formData.append("foodList",foodIdList);
         formData.append("type",index);
-        fetch('http://localhost:8080/Food/SortFood',{
+        fetch('http://localhost:32003/Food/SortFood',{
             credentials: 'include',
             method:'POST',
             mode:'cors',

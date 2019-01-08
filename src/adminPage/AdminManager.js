@@ -18,7 +18,7 @@ class AdminManager extends React.Component
     }
 
     componentWillMount(){
-        fetch('http://localhost:8080/Admin/State',{
+        fetch('http://localhost:32003/Admin/State',{
             credentials: 'include',
             method:'GET',
             mode:'cors',

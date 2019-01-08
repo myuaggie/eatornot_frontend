@@ -119,7 +119,7 @@ class WindowChart extends React.Component {
         if (this.props.windowId === 0) return;
         let formdata2=new FormData();
         formdata2.append("window",this.props.windowId);
-        fetch('http://localhost:8080/Data/GetTime',{
+        fetch('http://localhost:32003/Data/GetTime',{
             credentials: 'include',
             method:'POST',
             mode:'cors',
@@ -213,7 +213,7 @@ class WindowChart extends React.Component {
         if (nextProps.windowId !== 0) {
             let formdata2=new FormData();
             formdata2.append("window",nextProps.windowId);
-            fetch('http://localhost:8080/Data/GetTime',{
+            fetch('http://localhost:32003/Data/GetTime',{
                 credentials: 'include',
                 method:'POST',
                 mode:'cors',

@@ -58,7 +58,7 @@ class TextFields extends React.Component {
     }
 
     showInfo= () => {
-        fetch('http://localhost:8080/User/UserInfo',
+        fetch('http://localhost:32003/User/UserInfo',
             {
                 credentials: 'include',
                 method: 'GET',
@@ -118,7 +118,7 @@ class TextFields extends React.Component {
             alert("密码不符合格式要求!");
             return;
         }
-        fetch('http://localhost:8080/User/PassWordCheck?' +
+        fetch('http://localhost:32003/User/PassWordCheck?' +
             'userID='+this.props.userid+
             '&password='+this.state.inputPwd,
             {
@@ -156,7 +156,7 @@ class TextFields extends React.Component {
             alert("电话号码无效！");
             return;
         }
-        fetch('http://localhost:8080/User/HandleUserInfoChange?' +
+        fetch('http://localhost:32003/User/HandleUserInfoChange?' +
             'userID='+this.props.userid+
             '&username='+ this.state.name+
             '&password='+this.state.password+

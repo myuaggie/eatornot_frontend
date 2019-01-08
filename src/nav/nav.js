@@ -226,7 +226,7 @@ class MiniDrawer extends React.Component {
         if (this.state.value===0){
             formData.append("username",un.value);
             formData.append("password",pwd.value);
-            fetch('http://localhost:8080/User/Login',{
+            fetch('http://localhost:32003/User/Login',{
                 credentials: 'include',
                 method:'POST',
                 mode:'cors',
@@ -256,7 +256,7 @@ class MiniDrawer extends React.Component {
         else if (this.state.value===1){
             formData.append("id",un.value);
             formData.append("password",pwd.value);
-            fetch('http://localhost:8080/Admin/Login',{
+            fetch('http://localhost:32003/Admin/Login',{
                 credentials: 'include',
                 method:'POST',
                 mode:'cors',
@@ -282,7 +282,7 @@ class MiniDrawer extends React.Component {
         else{
             formData.append("id",un.value);
             formData.append("password",pwd.value);
-            fetch('http://localhost:8080/Worker/Login',{
+            fetch('http://localhost:32003/Worker/Login',{
                 credentials: 'include',
                 method:'POST',
                 mode:'cors',
@@ -364,7 +364,7 @@ class MiniDrawer extends React.Component {
         formData.append("password",this.state.pwdR);
         formData.append("email",this.state.emailR);
         formData.append("phone",this.state.phoneR);
-        fetch('http://localhost:8080/User/Register',{
+        fetch('http://localhost:32003/User/Register',{
             credentials: 'include',
             method:'POST',
             mode:'cors',
@@ -449,7 +449,7 @@ class MiniDrawer extends React.Component {
 
     handleLogout = () =>{
         if (this.state.admin){
-            fetch('http://localhost:8080/Admin/Logout', {
+            fetch('http://localhost:32003/Admin/Logout', {
                 credentials: 'include',
                 method: 'GET',
                 mode: 'cors',
@@ -459,7 +459,7 @@ class MiniDrawer extends React.Component {
             });
         }
         else if (this.state.worker){
-            fetch('http://localhost:8080/Worker/Logout', {
+            fetch('http://localhost:32003/Worker/Logout', {
                 credentials: 'include',
                 method: 'GET',
                 mode: 'cors',
@@ -469,7 +469,7 @@ class MiniDrawer extends React.Component {
             });
         }
         else {
-            fetch('http://localhost:8080/User/Logout', {
+            fetch('http://localhost:32003/User/Logout', {
                 credentials: 'include',
                 method: 'GET',
                 mode: 'cors',
@@ -542,7 +542,7 @@ class MiniDrawer extends React.Component {
     componentWillMount(){
         if (this.isMac()) this.setState({system:"mac"});
         if (this.isWindows()) this.setState({system:"windows"});
-        fetch('http://localhost:8080/User/State',{
+        fetch('http://localhost:32003/User/State',{
             credentials: 'include',
             method:'GET',
             mode:'cors',
@@ -556,7 +556,7 @@ class MiniDrawer extends React.Component {
                     this.setState({login:true});
                     let formdata=new FormData();
                     formdata.append("userID",result[0]);
-                    fetch('http://localhost:8080/UserTag/SearchSavedTag',{
+                    fetch('http://localhost:32003/UserTag/SearchSavedTag',{
                         credentials: 'include',
                         method:'POST',
                         mode:'cors',
@@ -575,7 +575,7 @@ class MiniDrawer extends React.Component {
                 }
             });
         });
-        fetch('http://localhost:8080/Worker/State',{
+        fetch('http://localhost:32003/Worker/State',{
             credentials: 'include',
             method:'GET',
             mode:'cors',
@@ -591,7 +591,7 @@ class MiniDrawer extends React.Component {
                 }
             });
         });
-        fetch('http://localhost:8080/Admin/State',{
+        fetch('http://localhost:32003/Admin/State',{
             credentials: 'include',
             method:'GET',
             mode:'cors',

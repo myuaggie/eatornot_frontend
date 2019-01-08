@@ -57,7 +57,7 @@ class SearchRes extends React.Component {
     handleShowPic= foodId => event =>{
         let formdata = new FormData();
         formdata.append("foodId",foodId);
-        fetch('http://localhost:8080/Food/GetPic',{
+        fetch('http://localhost:32003/Food/GetPic',{
             credentials: 'include',
             method:'POST',
             mode:'cors',
@@ -88,7 +88,7 @@ class SearchRes extends React.Component {
             else if (time >=17 && time <24){
                 formData.append("time","2");
             }
-            fetch('http://localhost:8080/Search/All',{
+            fetch('http://localhost:32003/Search/All',{
                 credentials: 'include',
                 method:'POST',
                 mode:'cors',

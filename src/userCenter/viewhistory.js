@@ -126,7 +126,7 @@ class ViewHistoryTableToolbar extends React.Component {
     }
 
     clickDelete=()=>{
-        fetch("http://localhost:8080/ViewHistory/UpdateViewHistory?"  +
+        fetch("http://localhost:32003/ViewHistory/UpdateViewHistory?"  +
             'userID='+this.props.userid+
             '&deleteID='+selectData,
             {
@@ -223,7 +223,7 @@ class ViewHistoryTable extends React.Component {
     }
 
     getViewHistory = () =>{
-        fetch("http://localhost:8080/ViewHistory/GetViewHistory?"  +
+        fetch("http://localhost:32003/ViewHistory/GetViewHistory?"  +
             'userID='+this.props.userid,
             {
                 credentials: 'include',

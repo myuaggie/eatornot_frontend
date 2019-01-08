@@ -25,7 +25,7 @@ class CommentManager extends React.Component
 
     fetchComment(){
         let tmp = this.state.comments;
-        fetch('http://localhost:8080/Admin/showComments',
+        fetch('http://localhost:32003/Admin/showComments',
             {
                 method: 'GET',
                 mode: 'cors',
@@ -67,7 +67,7 @@ class CommentManager extends React.Component
         let tmp = this.state.commentIDs;
         let deletedUserIDs = new FormData();
         deletedUserIDs.append("deletedCommentIDs", tmp);
-        fetch('http://localhost:8080/Admin/deleteComments',
+        fetch('http://localhost:32003/Admin/deleteComments',
             {
                 method: 'POST',
                 mode: 'cors',
@@ -80,7 +80,7 @@ class CommentManager extends React.Component
                         console.log("result: ", result);
                         alert(result);
                         tmp = [];
-                        fetch('http://localhost:8080/Admin/showComments',
+                        fetch('http://localhost:32003/Admin/showComments',
                             {
                                 method: 'GET',
                                 mode: 'cors',

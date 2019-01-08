@@ -103,7 +103,7 @@ class TagList extends React.Component {
 
 
     componentWillMount(){
-        fetch('http://localhost:8080/Food/AllTags',{
+        fetch('http://localhost:32003/Food/AllTags',{
             credentials: 'include',
             method:'GET',
             mode:'cors',

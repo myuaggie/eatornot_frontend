@@ -194,7 +194,7 @@ class PersonalRecommend extends React.Component
 
     searchFoodPic = (name) => {
         console.log("name:" + name);
-        fetch('http://localhost:8080/UserLikeFood/GetPic?' +
+        fetch('http://localhost:32003/UserLikeFood/GetPic?' +
             'foodID=' + name,
             {
                 credentials: 'include',
@@ -238,7 +238,7 @@ class PersonalRecommend extends React.Component
         if (temp[name] === false) {
             flag = 0;
         }
-        fetch('http://localhost:8080/UserLikeFood/update?' +
+        fetch('http://localhost:32003/UserLikeFood/update?' +
             'userId='+this.props.userid+
             '&userLikeId=' + name +
             '&flag=' + flag,
@@ -257,7 +257,7 @@ class PersonalRecommend extends React.Component
     };
 
     searchUserTagRelatedFood=()=>{
-        fetch('http://localhost:8080/UserTag/UserTagRelatedFood/search?' +
+        fetch('http://localhost:32003/UserTag/UserTagRelatedFood/search?' +
             'userId='+this.props.userid ,
             {
                 credentials: 'include',
@@ -352,7 +352,7 @@ class PersonalRecommend extends React.Component
                 dislikeTags.push(item.tags[i]);
             }
         }
-        fetch('http://localhost:8080/UserTag/UpdateUserDislikeTag?' +
+        fetch('http://localhost:32003/UserTag/UpdateUserDislikeTag?' +
             '&dislikeTags=' + dislikeTags,
             {
                 credentials: 'include',

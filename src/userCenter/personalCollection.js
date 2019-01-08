@@ -142,7 +142,7 @@ class PersonalCollection extends React.Component
 
     searchLikePic = (name) => {
         console.log("name:" + name);
-        fetch('http://localhost:8080/UserLikeFood/GetPic?foodID=' + name,
+        fetch('http://localhost:32003/UserLikeFood/GetPic?foodID=' + name,
             {
                 method: 'GET',
                 mode: 'cors',
@@ -168,7 +168,7 @@ class PersonalCollection extends React.Component
         if (temp[name] === false) {
             flag = 0;
         }
-        fetch('http://localhost:8080/UserLikeFood/update?' +
+        fetch('http://localhost:32003/UserLikeFood/update?' +
             'userId='+this.props.userid+
             '&userLikeId=' + name +
             '&flag=' + flag,
@@ -186,7 +186,7 @@ class PersonalCollection extends React.Component
     };
 
     searchLike=()=>{
-        fetch('http://localhost:8080/UserLikeFood/search?' +
+        fetch('http://localhost:32003/UserLikeFood/search?' +
             'userId='+this.props.userid,
             {
                 method: 'POST',

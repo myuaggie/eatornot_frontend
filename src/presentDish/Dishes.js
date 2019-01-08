@@ -98,7 +98,7 @@ class Dishes extends React.Component {
         }
         formData.append("userId",userId);
         formData.append("state",1);
-        fetch('http://localhost:8080/UserLikeFood/Save', {
+        fetch('http://localhost:32003/UserLikeFood/Save', {
             credentials: 'include',
             method: 'POST',
             mode: 'cors',
@@ -136,7 +136,7 @@ class Dishes extends React.Component {
         else {
             formData.append("userId",userId);
             formData.append("state",0);
-            fetch('http://localhost:8080/UserLikeFood/Save', {
+            fetch('http://localhost:32003/UserLikeFood/Save', {
                 credentials: 'include',
                 method: 'POST',
                 mode: 'cors',
@@ -161,7 +161,7 @@ class Dishes extends React.Component {
             //alert(userId+" "+this.props.foodId);
             formData.append("userId",userId);
             formData.append("state",0);
-            fetch('http://localhost:8080/UserLikeFood/Save', {
+            fetch('http://localhost:32003/UserLikeFood/Save', {
                 credentials: 'include',
                 method: 'POST',
                 mode: 'cors',

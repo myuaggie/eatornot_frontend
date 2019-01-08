@@ -61,7 +61,7 @@ class Floor extends React.Component {
       formData.append("restaurant",this.state.canteen);
       formData.append("floor",this.state.floorList[index]);
       formData.append("windowID",0);
-      fetch('http://localhost:8080/Window/WindowsByRestaurantFloor',{
+      fetch('http://localhost:32003/Window/WindowsByRestaurantFloor',{
           credentials: 'include',
           method:'POST',
           mode:'cors',
@@ -73,7 +73,7 @@ class Floor extends React.Component {
                   windows:result2 ,
                   floor:this.state.floorList[index]
               });
-              fetch('http://localhost:8080/Food/FoodsByWindowId',{
+              fetch('http://localhost:32003/Food/FoodsByWindowId',{
                   credentials: 'include',
                   method:'POST',
                   mode:'cors',
@@ -109,7 +109,7 @@ class Floor extends React.Component {
       }
       formData.append("floor",0);
 
-      fetch('http://localhost:8080/Window/FloorListByRestaurant',{
+      fetch('http://localhost:32003/Window/FloorListByRestaurant',{
           credentials: 'include',
           method:'POST',
           mode:'cors',
@@ -122,7 +122,7 @@ class Floor extends React.Component {
                       floorList:result
                   });
               }
-              fetch('http://localhost:8080/Window/WindowsByRestaurantFloor',{
+              fetch('http://localhost:32003/Window/WindowsByRestaurantFloor',{
                   credentials: 'include',
                   method:'POST',
                   mode:'cors',
@@ -165,7 +165,7 @@ class Floor extends React.Component {
           formData.append("restaurant",addr);
       }
         formData.append("floor",0);
-        fetch('http://localhost:8080/Window/FloorListByRestaurant',{
+        fetch('http://localhost:32003/Window/FloorListByRestaurant',{
             credentials: 'include',
             method:'POST',
             mode:'cors',
@@ -179,7 +179,7 @@ class Floor extends React.Component {
                         floor:0
                     });
                 }
-                fetch('http://localhost:8080/Window/WindowsByRestaurantFloor',{
+                fetch('http://localhost:32003/Window/WindowsByRestaurantFloor',{
                     credentials: 'include',
                     method:'POST',
                     mode:'cors',

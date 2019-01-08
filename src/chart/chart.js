@@ -98,7 +98,7 @@ class TempChart extends React.Component {
         let formdata=new FormData();
         formdata.append("restaurant","one");
         formdata.append("floor",0);
-        fetch('http://localhost:8080/Window/WindowsByRestaurantFloor',{
+        fetch('http://localhost:32003/Window/WindowsByRestaurantFloor',{
             credentials: 'include',
             method:'POST',
             mode:'cors',
@@ -111,7 +111,7 @@ class TempChart extends React.Component {
         });
         let formdata2=new FormData();
         formdata2.append("window",1);
-        fetch('http://localhost:8080/Data/GetTime',{
+        fetch('http://localhost:32003/Data/GetTime',{
             credentials: 'include',
             method:'POST',
             mode:'cors',
@@ -128,7 +128,7 @@ class TempChart extends React.Component {
     componentDidMount(){
         let formdata = new FormData();
         formdata.append("windowId",1);
-        fetch('http://localhost:8080/Window/GetPic',{
+        fetch('http://localhost:32003/Window/GetPic',{
             credentials: 'include',
             method:'POST',
             mode:'cors',
@@ -455,7 +455,7 @@ class TempChart extends React.Component {
         let formdata=new FormData();
         formdata.append("restaurant",event.target.value);
         formdata.append("floor",0);
-        fetch('http://localhost:8080/Window/WindowsByRestaurantFloor',{
+        fetch('http://localhost:32003/Window/WindowsByRestaurantFloor',{
             credentials: 'include',
             method:'POST',
             mode:'cors',
@@ -467,7 +467,7 @@ class TempChart extends React.Component {
                 this.setState({windowId:result.length>0?result[0].windowId:null, picReady:false});
                 let formdata2=new FormData();
                 formdata2.append("window",result[0].windowId);
-                fetch('http://localhost:8080/Data/GetTime',{
+                fetch('http://localhost:32003/Data/GetTime',{
                     credentials: 'include',
                     method:'POST',
                     mode:'cors',
@@ -482,7 +482,7 @@ class TempChart extends React.Component {
 
                 let formdata3 = new FormData();
                 formdata3.append("windowId",result[0].windowId);
-                fetch('http://localhost:8080/Window/GetPic',{
+                fetch('http://localhost:32003/Window/GetPic',{
                     credentials: 'include',
                     method:'POST',
                     mode:'cors',
@@ -506,7 +506,7 @@ class TempChart extends React.Component {
         this.setState({windowId:event.target.value, picReady: false});
         let formdata = new FormData();
         formdata.append("windowId",event.target.value);
-        fetch('http://localhost:8080/Window/GetPic',{
+        fetch('http://localhost:32003/Window/GetPic',{
             credentials: 'include',
             method:'POST',
             mode:'cors',
@@ -523,7 +523,7 @@ class TempChart extends React.Component {
         });
         let formdata2=new FormData();
         formdata2.append("window",event.target.value);
-        fetch('http://localhost:8080/Data/GetTime',{
+        fetch('http://localhost:32003/Data/GetTime',{
             credentials: 'include',
             method:'POST',
             mode:'cors',

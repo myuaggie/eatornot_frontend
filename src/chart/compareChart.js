@@ -91,7 +91,7 @@ class CompareChart extends React.Component {
         let formdata=new FormData();
         formdata.append("restaurant","one");
         formdata.append("floor",0);
-        fetch('http://localhost:8080/Window/WindowsByRestaurantFloor',{
+        fetch('http://localhost:32003/Window/WindowsByRestaurantFloor',{
             credentials: 'include',
             method:'POST',
             mode:'cors',
@@ -327,7 +327,7 @@ class CompareChart extends React.Component {
         let formdata=new FormData();
         formdata.append("restaurant",event.target.value);
         formdata.append("floor",0);
-        fetch('http://localhost:8080/Window/WindowsByRestaurantFloor',{
+        fetch('http://localhost:32003/Window/WindowsByRestaurantFloor',{
             credentials: 'include',
             method:'POST',
             mode:'cors',
@@ -348,7 +348,7 @@ class CompareChart extends React.Component {
         let formdata=new FormData();
         formdata.append("restaurant",event.target.value);
         formdata.append("floor",0);
-        fetch('http://localhost:8080/Window/WindowsByRestaurantFloor',{
+        fetch('http://localhost:32003/Window/WindowsByRestaurantFloor',{
             credentials: 'include',
             method:'POST',
             mode:'cors',
@@ -375,7 +375,7 @@ class CompareChart extends React.Component {
     handleCompare =()=>{
         let formdata=new FormData();
         formdata.append("window",this.state.windowId);
-        fetch('http://localhost:8080/Data/GetTime',{
+        fetch('http://localhost:32003/Data/GetTime',{
             credentials: 'include',
             method:'POST',
             mode:'cors',
@@ -388,7 +388,7 @@ class CompareChart extends React.Component {
         });
         let formdata2=new FormData();
         formdata2.append("window",this.state.windowId2);
-        fetch('http://localhost:8080/Data/GetTime',{
+        fetch('http://localhost:32003/Data/GetTime',{
             credentials: 'include',
             method:'POST',
             mode:'cors',

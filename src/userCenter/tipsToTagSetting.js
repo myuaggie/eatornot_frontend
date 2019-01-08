@@ -114,7 +114,7 @@ class TipsToTagSetting extends Component {
                 tagChoose.push(i);
             }
         }
-        fetch('http://localhost:8080/UserTag/ChooseTag?' +
+        fetch('http://localhost:32003/UserTag/ChooseTag?' +
             'userID='+this.props.userid+
             '&tagArray='+tagChoose,
             {
@@ -137,7 +137,7 @@ class TipsToTagSetting extends Component {
     };
 
     showTags= () => {
-        fetch('http://localhost:8080/UserTag/ShowFoodTags',
+        fetch('http://localhost:32003/UserTag/ShowFoodTags',
             {
                 credentials: 'include',
                 method: 'GET',

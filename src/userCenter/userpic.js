@@ -16,7 +16,7 @@ class Avatar extends React.Component {
     }
 
     showPic = () => {
-        fetch('http://localhost:8080/User/GetPic?userID='+this.props.userid,
+        fetch('http://localhost:32003/User/GetPic?userID='+this.props.userid,
             {
                 method: 'GET',
                 mode: 'cors',
@@ -72,7 +72,7 @@ class Avatar extends React.Component {
 
         let formData = new FormData();
         formData.append('files[]', file);
-        fetch('http://localhost:8080/User/UpdatePic?userId='+this.props.userid,
+        fetch('http://localhost:32003/User/UpdatePic?userId='+this.props.userid,
             {
                 method: 'POST',
                 mode: 'cors',

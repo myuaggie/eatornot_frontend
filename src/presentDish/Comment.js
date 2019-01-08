@@ -96,7 +96,7 @@ class CommentList extends React.Component {
         ];
 
     componentWillMount(){
-        fetch('http://localhost:8080/User/State',{
+        fetch('http://localhost:32003/User/State',{
             credentials: 'include',
             method:'GET',
             mode:'cors',
@@ -122,7 +122,7 @@ class CommentList extends React.Component {
         let formData=new FormData();
         formData.append("commentId",commentId);
         formData.append("windowId",this.state.windowId);
-        fetch('http://localhost:8080/Comment/DeleteComment',{
+        fetch('http://localhost:32003/Comment/DeleteComment',{
             credentials: 'include',
             method:'POST',
             mode:'cors',
@@ -142,7 +142,7 @@ class CommentList extends React.Component {
         let formData = new FormData();
         formData.append("windowId",this.props.windowId);
         formData.append("commentContent",this.state.commentContent);
-        fetch('http://localhost:8080/Comment/Save',{
+        fetch('http://localhost:32003/Comment/Save',{
             credentials: 'include',
             method:'POST',
             mode:'cors',

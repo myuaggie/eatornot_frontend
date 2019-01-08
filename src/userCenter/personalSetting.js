@@ -109,7 +109,7 @@ class PersonalSetting extends React.Component {
     };
 
     showTags= () => {
-        fetch('http://localhost:8080/Tag/ShowTags',
+        fetch('http://localhost:32003/Tag/ShowTags',
             {
                 credentials: 'include',
                 method: 'GET',
@@ -163,7 +163,7 @@ class PersonalSetting extends React.Component {
     };
 
     searchSavedTag= () => {
-        fetch('http://localhost:8080/UserTag/SearchSavedTag?' +
+        fetch('http://localhost:32003/UserTag/SearchSavedTag?' +
             'userID='+this.props.userid,
             {
                 credentials: 'include',
@@ -197,7 +197,7 @@ class PersonalSetting extends React.Component {
             sendArr.push(this.state.chooseType);
             sendArr.push(this.state.chooseName);
         }
-        fetch('http://localhost:8080/UserTag/ChooseTag?' +
+        fetch('http://localhost:32003/UserTag/ChooseTag?' +
             'userID='+this.props.userid+
             '&tagArray='+sendArr,
             {
@@ -219,7 +219,7 @@ class PersonalSetting extends React.Component {
     };
 
     searchNewAddTag=()=>{
-        fetch('http://localhost:8080/UserTag/SearchNewAddTag?' +
+        fetch('http://localhost:32003/UserTag/SearchNewAddTag?' +
             'tagName='+this.state.chooseName,
             {
                 credentials: 'include',

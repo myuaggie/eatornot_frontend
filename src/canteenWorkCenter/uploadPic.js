@@ -15,7 +15,7 @@ class WorkerPage extends React.Component {
     }
 
     componentWillMount(){
-        fetch('http://localhost:8080/Worker/State',{
+        fetch('http://localhost:32003/Worker/State',{
             credentials: 'include',
             method:'GET',
             mode:'cors',
@@ -51,7 +51,7 @@ class WorkerPage extends React.Component {
 
         let formData = new FormData();
         formData.append('files[]', file);
-        fetch('http://localhost:8080/Worker/UpdatePic?WindowID='+this.state.windowId,
+        fetch('http://localhost:32003/Worker/UpdatePic?WindowID='+this.state.windowId,
             {
                 method: 'POST',
                 mode: 'cors',

@@ -85,7 +85,7 @@ class MenuManager extends React.Component {
     };
 
     showTags() {
-        fetch('http://localhost:8080/Tag/ShowTags',
+        fetch('http://localhost:32003/Tag/ShowTags',
             {
                 credentials: 'include',
                 method: 'GET',
@@ -138,7 +138,7 @@ class MenuManager extends React.Component {
         }
         formData.append("ExistedFood", this.state.foodIDs);
         formData.append("windowID", this.state.windowID);
-        fetch('http://localhost:8080/Admin/AddTodayFood/ExistedFood',
+        fetch('http://localhost:32003/Admin/AddTodayFood/ExistedFood',
             {
                 credentials: 'include',
                 method: 'POST',
@@ -171,7 +171,7 @@ class MenuManager extends React.Component {
         formData.append("foodPrice", this.state.price);
         formData.append("foodTip", this.state.tips);
         formData.append("tags", tagChoose);
-        fetch('http://localhost:8080/Admin/AddTodayFood/NewFood',
+        fetch('http://localhost:32003/Admin/AddTodayFood/NewFood',
             {
                 credentials: 'include',
                 method: 'POST',
@@ -198,7 +198,7 @@ class MenuManager extends React.Component {
                         let formData = new FormData();
                         formData.append('files[]', this.state.file);
                         formData.append('foodID', result);
-                        fetch('http://localhost:8080/Admin/UploadNewFoodPic?' ,
+                        fetch('http://localhost:32003/Admin/UploadNewFoodPic?' ,
                             {
                                 method: 'POST',
                                 mode: 'cors',
@@ -275,7 +275,7 @@ class MenuManager extends React.Component {
     }
     fetchInfo() {
         let tmp = this.state.newData;
-        fetch('http://localhost:8080/Admin/ShowNews',
+        fetch('http://localhost:32003/Admin/ShowNews',
             {
                 method: 'GET',
                 mode: 'cors',
@@ -316,7 +316,7 @@ class MenuManager extends React.Component {
             return;
         }
             let tmpAll = [];
-            fetch('http://localhost:8080/Admin/checkWindow' +
+            fetch('http://localhost:32003/Admin/checkWindow' +
                 '?windowID=' + this.state.windowID,
                 {
                     method: 'GET',
@@ -349,7 +349,7 @@ class MenuManager extends React.Component {
                             });
 
                             this.showTags();
-                            fetch('http://localhost:8080/Admin/fetchWindowPic' +
+                            fetch('http://localhost:32003/Admin/fetchWindowPic' +
                                 '?windowID=' + this.state.windowID,
                                 {
                                     method: 'GET',

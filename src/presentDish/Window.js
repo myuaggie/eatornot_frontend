@@ -48,7 +48,7 @@ class Window extends React.Component {
     componentWillMount(){
         let formData=new FormData();
         formData.append("foodId",this.props.foodId);
-        fetch('http://localhost:8080/User/State',{
+        fetch('http://localhost:32003/User/State',{
             credentials: 'include',
             method:'POST',
             mode:'cors',

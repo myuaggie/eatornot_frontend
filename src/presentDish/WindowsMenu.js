@@ -65,7 +65,7 @@ class WindowsMenu extends React.Component {
         formData.append("floor",this.props.floor);
         formData.append("windowId",windowId);
         formData.append("tagList",this.state.ChooseTag);
-        fetch('http://localhost:8080/Food/FoodsByWindowId',{
+        fetch('http://localhost:32003/Food/FoodsByWindowId',{
             credentials: 'include',
             method:'POST',
             mode:'cors',
@@ -83,7 +83,7 @@ class WindowsMenu extends React.Component {
                 });
             })
         });
-        fetch('http://localhost:8080/Comment/AllCommentByWindowId',{
+        fetch('http://localhost:32003/Comment/AllCommentByWindowId',{
             credentials: 'include',
             method:'POST',
             mode:'cors',
@@ -112,7 +112,7 @@ class WindowsMenu extends React.Component {
         formData.append("floor",this.props.floor);
         formData.append("windowId",this.state.windowId);
         formData.append("tagList",temp);
-        fetch('http://localhost:8080/Food/FoodsByWindowId',{
+        fetch('http://localhost:32003/Food/FoodsByWindowId',{
             credentials: 'include',
             method:'POST',
             mode:'cors',
@@ -145,7 +145,7 @@ class WindowsMenu extends React.Component {
         formData.append("floor",this.props.floor);
         formData.append("windowId",this.state.windowId);
         formData.append("tagList",temp);
-        fetch('http://localhost:8080/Food/FoodsByWindowId',{
+        fetch('http://localhost:32003/Food/FoodsByWindowId',{
             credentials: 'include',
             method:'POST',
             mode:'cors',
@@ -190,7 +190,7 @@ class WindowsMenu extends React.Component {
         else{
             formData.append("windowId",0);
         }
-        fetch('http://localhost:8080/Food/FoodsByWindowId',{
+        fetch('http://localhost:32003/Food/FoodsByWindowId',{
             credentials: 'include',
             method:'POST',
             mode:'cors',
@@ -231,7 +231,7 @@ class WindowsMenu extends React.Component {
                 windowId:0
             });
         }
-        fetch('http://localhost:8080/Food/FoodsByWindowId',{
+        fetch('http://localhost:32003/Food/FoodsByWindowId',{
             credentials: 'include',
             method:'POST',
             mode:'cors',
